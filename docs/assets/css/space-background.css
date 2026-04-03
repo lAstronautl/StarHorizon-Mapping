@@ -1,0 +1,22 @@
+/* Space Background Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    min-height: 100vh;
+}
+
+#spaceCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background: linear-gradient(to bottom, #000011 0%, #0a0a1a 50%, #000011 100%);
+}
