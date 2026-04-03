@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-test-page.html).
+[Link to another page](./markdown/another-test-page.html).
 
 There should be whitespace between paragraphs.
 

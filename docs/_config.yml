@@ -1,5 +1,7 @@
-title: Space theme
-description: a Space theme
+title: Мапперский кодекс
+description: Сборник разрешений и инструкций для маппинга шаттлов и их проверки для StarHorizon Frontier.
 header_links:
   - title: Главная
     url: /
+  - title: Цена шаттлов
+    url: ./markdown/shuttle-costs.html
