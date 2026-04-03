@@ -24,7 +24,7 @@ price: 16000 # 14400, наценка верфи 10% = 15840
 <strong>`appraisegrid`</strong>
 <span class="hover-text">appraisegrid [grid Id]
 Подсчитывает цену всех предметов на гриде
-<span>
+</span>
 </span>
 что бы узнать цену шаттла
 
