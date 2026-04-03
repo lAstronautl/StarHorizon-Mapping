@@ -297,3 +297,18 @@ section {
     display: none;
   }
 }
+
+/* Table responsive styles */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table td, table th {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 250px;
+  white-space: normal;
+}
