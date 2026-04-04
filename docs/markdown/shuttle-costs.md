@@ -12,6 +12,8 @@ title: Цена шаттлов
 price: 16000 # 14400, наценка верфи 10% = 15840
 ```
 ### Расшифровка цены
+<div style="overflow-x:auto;">
+<table style="width:100%; border-collapse: collapse;">
 <thead>
 <tr>
 <th>Финальная цена</th>
@@ -29,6 +31,8 @@ price: 16000 # 14400, наценка верфи 10% = 15840
 </tr>
 
 ## Тиры шаттлов и их наценки для ориентации
+<div style="overflow-x:auto;">
+<table style="width:100%; border-collapse: collapse;">
 <thead>
 <tr>
 <th>1 ТИР</th>
