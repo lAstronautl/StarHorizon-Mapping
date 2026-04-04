@@ -2,6 +2,14 @@ title: Мапперский кодекс
 description: Сборник разрешений и инструкций для маппинга шаттлов и их проверки для StarHorizon Frontier.
 header_links:
   - title: Главная
-    url: /
+    url: https://lastronautl.github.io/StarHorizon-Mapping/
+  - title: Типы и тиры
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/types-and-tiers.html
+  - title: Правила маппинга
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/rules-for-mapping.html
+  - title: Cоздание прототипов
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/prototype-creation.html
+  - title: Приёмная верфь
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/reception-shipyard.html
   - title: Цена шаттлов
-    url: ./markdown/shuttle-costs.html
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/shuttle-costs.html
