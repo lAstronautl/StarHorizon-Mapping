@@ -20,32 +20,3 @@ body {
     z-index: -1;
     background: linear-gradient(to bottom, #000011 0%, #0a0a1a 50%, #000011 100%);
 }
-
-/* Hover tooltip styles */
-.hover-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.hover-container .hover-text {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease;
-    z-index: 10;
-}
-
-.hover-container:hover .hover-text {
-    opacity: 1;
-    visibility: visible;
-}

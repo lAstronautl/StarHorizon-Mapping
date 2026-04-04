@@ -1,0 +1,25 @@
+.tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted #aaa;
+}
+
+.tooltip::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 125%;
+  left: 0;
+  background: #1e1c1a;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
