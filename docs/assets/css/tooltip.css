@@ -13,13 +13,12 @@
   color: #fff;
   padding: 6px 10px;
   border-radius: 6px;
-  white-space: normal;
+  white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: 0.2s;
   font-size: 13px;
   z-index: 10;
-  max-width: 250px;
 }
 
 .tooltip:hover::after {
