@@ -299,25 +299,16 @@ section {
 }
 
 /* Table responsive styles */
-.table-wrapper {
+table {
   display: block;
-  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 20px 0;
 }
 
-.table-wrapper table {
-  min-width: 600px;
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.table-wrapper table td,
-.table-wrapper table th {
+table td, table th {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  word-break: break-word;
+  max-width: 250px;
   white-space: normal;
 }
