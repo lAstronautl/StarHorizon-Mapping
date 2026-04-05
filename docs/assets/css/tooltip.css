@@ -26,12 +26,10 @@
 }
 
 /* Тултип с картинкой */
-.tooltip-images-container {
-  display: inline-block;
-}
-
 .tooltip-img {
-  display: inline-block;
+  position: absolute;
+  bottom: 125%;
+  left: 0;
   background: #1e1c1a;
   padding: 6px;
   border-radius: 6px;
@@ -39,14 +37,6 @@
   pointer-events: none;
   transition: 0.2s;
   z-index: 10;
-  margin-right: 4px;
-  position: relative;
-  bottom: auto;
-  left: auto;
-}
-
-.tooltip-img:last-child {
-  margin-right: 0;
 }
 
 .tooltip-img img {
