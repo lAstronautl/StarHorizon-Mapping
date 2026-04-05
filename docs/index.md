@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="timestamp">Некоторые документы пока являются сырыми и будут дорабатываться.<br></div>
 
 *   [Типы и тиры](./markdown/types-and-tiers.html).
 *   [Правила маппинга шаттлов](./markdown/rules-for-mapping.html).

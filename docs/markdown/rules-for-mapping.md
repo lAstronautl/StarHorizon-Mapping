@@ -20,7 +20,7 @@
 7. <span class="tooltip"><u>Двигатели должны быть доступны (в случае ЭМИ атак или модернизации).</u><span class="tooltip-img"><img src="../assets/images/thruster.png"></span></span>
 8. <span class="tooltip"><u>Ваша проводка должна быть логичной и минимальной.</u><span class="tooltip-img"><img src="../assets/images/allow-item.png"></span></span>
 9. <span class="tooltip"><u>На шаттле не должно быть индивидуально заполненных шкафчиков (используйте уже имеющиеся)</u><span class="tooltip-img"><img src="../assets/images/custom-loot.png"></span></span>
-10. Выполните команды <span class="tooltip" data-text="variantize [grid id] - Рамдомизирует спрайты тайлов на гриде"><u>`variantize`</u></span> и <span class="tooltip" data-text="fixgridatmos [grid id] - Создаёт атмосферу на шаттле"><u>`fixgridatmos`</u></span> на гриде шаттла
+10. Выполните команды <span class="tooltip" data-text="variantize [grid id] - Рамдомизирует спрайты тайлов на гриде"><u><code>variantize</code></u></span> и <span class="tooltip" data-text="fixgridatmos [grid id] - Создаёт атмосферу на шаттле"><u><code>fixgridatmos</code></u></span> на гриде шаттла
 11. <span class="tooltip"><u>На шаттле не должны быть POI вендоматы или машины.</u><span class="tooltip-img"><img src="../assets/images/block-item.png"></span></span>
 12. <span class="tooltip" data-text="savegrid [grid id] [Путь] - Позволяет сохранить карту как грид для коректного спавна"><u>Сохраните свой шаттл как грид, а не как карту.</u></span>
 13. <span class="tooltip"><u>Шаттл должен быть не меньше 20 тайлов или не больше 2304 и так же не должен выходить по размерам из своей категории<</u><span class="tooltip-img"><img src="../assets/images/mini-shuttle.png"></span></span>
