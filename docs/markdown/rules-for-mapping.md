@@ -41,7 +41,7 @@
 
 ---
 
-* <span class="tooltip"><u>Не размещайте перпендикулярно стены или окна</u><span class="tooltip-img"><img src="../assets/images/diagonal-no.png"></span><span class="tooltip-img"><img src="../assets/images/diagonal-yes.png"></span></span>
+* <span class="tooltip"><u>Не размещайте перпендикулярно стены или окна</u><span class="tooltip-images-container"><span class="tooltip-img"><img src="../assets/images/diagonal-no.png"></span><span class="tooltip-img"><img src="../assets/images/diagonal-yes.png"></span></span></span>
   * Особое внимание следует уделить планировке помещений на корабле, а также стенам и диагональным объектам. Например, крайне не рекомендуется размещать двери на перпендикулярных стенах прямо в углах. В некоторых небольших и компактных проектах это необходимо, но по возможности следует избегать этого.
   * Диагональные или наклонные окна и стены также требуют особого внимания. У них нету компонента теней, что позволяет смотреть сквозь них, и использование диагональных стен или окон без стен запрещено.
 
@@ -51,7 +51,7 @@
 * <span class="tooltip"><u>Ваш шаттл должен быть задекорирован.</u><span class="tooltip-img"><img src="../assets/images/decals.png"></span></span>
   * Не забывайте про декали, плакаты и другие способы декораций шаттлов.
 
-* <span class="tooltip"><u>Для некоторых шаттлов нужен быстрый доступ в космос.</u><span class="tooltip-img"><img src="../assets/images/blast-door-no.png"></span><span class="tooltip-img"><img src="../assets/images/blast-door-yes.png"></span></span>
+* <span class="tooltip"><u>Для некоторых шаттлов нужен быстрый доступ в космос.</u><span class="tooltip-images-container"><span class="tooltip-img"><img src="../assets/images/blast-door-no.png"></span><span class="tooltip-img"><img src="../assets/images/blast-door-yes.png"></span></span></span>
   * Для таких шаттлов как утилизатоские, медицинские и инженерные нужен быстрый доступ в космос вы можете использовать направленные вентиляторы и гермозатворы чтобы оказать быстрый доступ в космос.
 
 * <span class="tooltip"><u>Окна.</u><span class="tooltip-img"><img src="../assets/images/windows.png"></span></span>
