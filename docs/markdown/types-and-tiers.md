@@ -5,7 +5,6 @@ title: Типы и тиры
 # Типы и тиры
 ### Тут описаны все типы шаттлов и что на них может быть для понимания
 
-
 <div style="overflow-x:auto;">
     <table style="width:100%; border-collapse: collapse;">
       <thead>
@@ -131,7 +130,7 @@ title: Типы и тиры
   </table>
 </div>
 
-### Тут написаны все <u>**тиры**</u> для обозначения наценок на шаттлы
+### Тут написаны все **<u>тиры</u>** для обозначения наценок на шаттлы
 
 <div style="overflow-x:auto;">
 <table style="width:100%; border-collapse: collapse;">
@@ -168,8 +167,6 @@ title: Типы и тиры
 </div>
 
 ### Пример: Баржа
-
-
 
 <div style="overflow-x:auto;">
 <table style="width:100%; border-collapse: collapse;">
