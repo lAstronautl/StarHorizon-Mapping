@@ -68,9 +68,9 @@ price: 16000 # 14400, наценка верфи 10% = 15840
 </table>
 </div>
 
-Используйте <span class="tooltip" data-text="appraisegrid [grid Id] — подсчитывает цену всех предметов на гриде"><code>appraisegrid</code></span> что бы узнать цену шаттла
-
 ### Подсчёт цены
+
+Используйте <span class="tooltip" data-text="appraisegrid [grid Id] — подсчитывает цену всех предметов на гриде"><code>appraisegrid</code></span> что бы узнать цену шаттла
 
 Берём стандартную цену в 14400 далее умножаем на 1.10 (“10” это процент наценки иза тира).
 
