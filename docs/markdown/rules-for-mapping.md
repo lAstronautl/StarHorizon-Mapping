@@ -1,5 +1,8 @@
 # Правила маппинга
 ### Большинство из пунктов важны но так же бывают и исключения
+
+<div class="timestamp">Уточнение по шаттлам которые были сделаны до обновления правил и одобреные. Они могут игнорировать новые пункты правил если нету грубейших нарушений.<br></div>
+
 ## Маппинг шаттлов
 
 1. <span class="tooltip"><u>Убедитесь, что на вашем судне установлены скрубберы которые выводят газы в космос (все генераторы выбрасывают CO2).</u><span class="tooltip-img"><img src="../assets/images/atmos.png"></span></span>
@@ -17,8 +20,8 @@
 4. <span class="tooltip"><u>Используйте двухступенчатые шлюзы (например, стыковочный шлюз \+ красные шлюзы).</u><span class="tooltip-img"><img src="../assets/images/gateway.png"></span></span>
 5. <span class="tooltip"><u>Разместите направленные вентиляторы на шлюзы которые выходят в космос.</u><span class="tooltip-img"><img src="../assets/images/directional-fan.png"></span></span>
 7. <span class="tooltip"><u>Двигатели должны быть доступны (в случае ЭМИ атак или модернизации).</u><span class="tooltip-img"><img src="../assets/images/thruster.png"></span></span>
-8. <span class="tooltip"><u>Ваша проводка должна быть логичной и минимальной.</u><span class="tooltip-img"><img src="../assets/images/allow-item.png"></span></span>
-9. <span class="tooltip"><u>На шаттле <strong>не</strong> должно быть индивидуально заполненных шкафчиков (используйте уже имеющиеся)</u><span class="tooltip-img"><img src="../assets/images/custom-loot.png"></span></span>
+8. <span class="tooltip"><u>Ваша проводка должна быть логичной и минимальной.</u><span class="tooltip-images-container"><span class="tooltip-img"><img src="../assets/images/cables-no.png"></span><span class="tooltip-img"><img src="../assets/images/cables-yes.png"></span></span></span>
+9. <span class="tooltip"><u>На шаттле <strong>не</strong> должно быть индивидуально заполненных шкафчиков (используйте уже имеющиеся)</u><span class="tooltip-images-container"><span class="tooltip-img"><img src="../assets/images/over-loot.png"></span><span class="tooltip-img"><img src="../assets/images/custom-loot.png"></span></span></span>
 10. Выполните команды <span class="tooltip" data-text="variantize [grid id] - Рамдомизирует спрайты тайлов на гриде"><u><code>variantize</code></u></span> и <span class="tooltip" data-text="fixgridatmos [grid id] - Создаёт атмосферу на шаттле"><u><code>fixgridatmos</code></u></span> на гриде шаттла
 11. <span class="tooltip"><u>На шаттле <strong>не</strong> должны быть POI вендоматы или машины.</u><span class="tooltip-img"><img src="../assets/images/block-item.png"></span></span>
 12. <span class="tooltip" data-text="savegrid [grid id] [Путь] - Позволяет сохранить карту как грид для коректного спавна"><u>Сохраните свой шаттл как грид, а не как карту.</u></span>
@@ -46,7 +49,15 @@
   * Диагональные или наклонные окна и стены также требуют особого внимания. У них нету компонента теней, что позволяет смотреть сквозь них, и использование диагональных стен или окон без стен запрещено.
 
 * <span class="tooltip"><u>Не забывайте про пожарные и воздушние сигнализации.</u><span class="tooltip-img"><img src="../assets/images/firelock.png"></span></span>
-  * Старайтесь размещать на шаттлах пожарный шлюзы, пожарные сигнализации, воздушные сигнализации, сенсоры воздуха и не забудьте их подключить.  
+  * Старайтесь размещать на шаттлах пожарный шлюзы, пожарные сигнализации, воздушные сигнализации, сенсоры воздуха и не забудьте их подключить.
+
+* <span class="tooltip"><u>Орудия шаттлов</u><span class="tooltip-img"><img src="../assets/images/weapon-shuttle.png"></span></span>
+  * Разрешено использование **ТОЛЬКО** ванильных орудий для шаттлов в этот перечень входит EXP-2100g "Дастер", EXP-320g "Дружба", LSE-1200c "Перфоратор", LSE-400c "Пулемёт Свалинн", пушка пиратского шаттла
+  * Учтите что EXP-2100g "Дастер" и EXP-320g "Дружба" Должны содержать только **НЕЛЕТАЛЬНЫЕ** боеприпасы
+  * Так же орудия разрешены **ТОЛЬКО** для шаттлов верфи Пиратов, Синдикат и ДШ  
+
+* <span class="tooltip"><u>Вспомогательная силовая установка (ВСУ)</u><span class="tooltip-img"><img src="../assets/images/APC.png"></span></span>
+  * ВСУ разрешён **ТОЛЬКО** Для шаттлов верфи ДШ и Синдикат и только если шаттл размером микро
 
 * <span class="tooltip"><u>Ваш шаттл должен быть задекорирован.</u><span class="tooltip-img"><img src="../assets/images/decals.png"></span></span>
   * Не забывайте про декали, плакаты и другие способы декораций шаттлов.
@@ -59,7 +70,7 @@
   * Кроме того, под всеми окнами должны быть установлены решетки для обеспечения единообразия стиля.
   * Также не используйте тайловые решетки под окнами
 
-* <span class="tooltip"><u>Компоненты.</u><span class="tooltip-img"><img src="../assets/images/becomesstation.png"></span></span>
+* <span class="tooltip"><u>Компоненты.</u><span class="tooltip-img"><img src="../assets/images/becomes-station.png"></span></span>
   * На гриде вашего шаттла должен быть добавлен компонент BecomesStation.
   * В самом компоненте укажите id вашего шаттла.
 
