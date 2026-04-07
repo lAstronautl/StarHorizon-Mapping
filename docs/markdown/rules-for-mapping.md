@@ -27,22 +27,22 @@
 10. Выполните команды <span class="tooltip" data-text="variantize [grid id] - Рамдомизирует спрайты тайлов на гриде"><code>variantize</code></span> и <span class="tooltip" data-text="fixgridatmos [grid id] - Создаёт атмосферу на шаттле"><code>fixgridatmos</code></span> на гриде шаттла
 11. <span class="tooltip">На шаттле <strong>не</strong> должны быть POI вендоматы или машины.<span class="tooltip-img"><img src="../assets/images/block-item.png"></span></span>
 12. <span class="tooltip" data-text="savegrid [grid id] [Путь] - Позволяет сохранить карту как грид для коректного спавна">Сохраните свой шаттл как грид, а не как карту.</span>
-13. <span class="tooltip">Шаттл должен быть не меньше 20 тайлов или не больше 2304 и так же не должен выходить по размерам из своей категории<<span class="tooltip-img"><img src="../assets/images/mini-shuttle.png"></span></span>
-15. <span class="tooltip">Единственное, что можно установит на окнах, это неоновые вывески, ставни и гермозатвор.<span class="tooltip-img"><img src="../assets/images/signs.png"></span></span>
-16. <span class="tooltip">Не переименовывайте варп поинты, игра сама даёт им имя.<span class="tooltip-img"><img src="../assets/images/no-rename.png"></span></span>
-17. <span class="tooltip">Не пишите имя каких то персонажей в заметках на корабле.<span class="tooltip-img"><img src="../assets/images/no-name.png"></span></span>
-18. <span class="tooltip">Экспедиционные корабли должны использовать ДАМ и должны иметь минимальную цену в 50 000 кредитов.<span class="tooltip-img"><img src="../assets/images/ame.png"></span></span>
-19. <span class="tooltip">Шаттл <strong>НЕ</strong> должен использовать закрытые шлюзы, все шлюзы на шаттлах должны быть <strong>БЕЗ</strong> доступов<span class="tooltip-img"><img src="../assets/images/acces-lock.png"></span></span>
-20. <span class="tooltip">На шаттле должно быть аварийное снаряжение:<span class="tooltip-img"><img src="../assets/images/emergency-equipment.png"></span></span>
+13. <span class="tooltip">Шаттл должен быть не меньше 20 тайлов или не больше 2304 и так же не должен выходить по размерам из своей категории<span class="tooltip-img"><img src="../assets/images/mini-shuttle.png"></span></span>
+14. <span class="tooltip">Единственное, что можно установит на окнах, это неоновые вывески, ставни и гермозатвор.<span class="tooltip-img"><img src="../assets/images/signs.png"></span></span>
+15. <span class="tooltip">Не переименовывайте варп поинты, игра сама даёт им имя.<span class="tooltip-img"><img src="../assets/images/no-rename.png"></span></span>
+16. <span class="tooltip">Не пишите имя каких то персонажей в заметках на корабле.<span class="tooltip-img"><img src="../assets/images/no-name.png"></span></span>
+17. <span class="tooltip">Экспедиционные корабли должны использовать ДАМ и должны иметь минимальную цену в 50 000 кредитов.<span class="tooltip-img"><img src="../assets/images/ame.png"></span></span>
+18. <span class="tooltip">Шаттл <strong>НЕ</strong> должен использовать закрытые шлюзы, все шлюзы на шаттлах должны быть <strong>БЕЗ</strong> доступов<span class="tooltip-img"><img src="../assets/images/acces-lock.png"></span></span>
+19. <span class="tooltip">На шаттле должно быть аварийное снаряжение:<span class="tooltip-img"><img src="../assets/images/emergency-equipment.png"></span></span>
     1. Дефибриллятор.
     2. Огнетушитель.
     3. Шкаф со скафандром (можно и аварийный).
-21. <span class="tooltip">На шаттле **не** должно быть:<span class="tooltip-img"><img src="../assets/images/block-item.png"></span></span>
+20. <span class="tooltip">На шаттле **не** должно быть:<span class="tooltip-img"><img src="../assets/images/block-item.png"></span></span>
     1. Газодобытчики.  
     2. РИТЭГи (сломанные или исправные).  
     3. Любые источники энергии, не потребляющие топливо (за исключением солнечных панелей).
-    5. Любое огнестрельное оружие.  
-    6. Избыточные материалы (слишком много стали или стекла).
+    4. Любое огнестрельное оружие.
+    5. Избыточные материалы (слишком много стали или стекла).
 
 ---
 
