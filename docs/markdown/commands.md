@@ -83,8 +83,7 @@
     <tr>
       <td><code>mapping</code></td>
       <td>Загружает змороженую карту</td>
-      <td><code>mapping 20 /Maps/map-name.yml</code><br><br>Если путь не указан то создаётся пустая карта
-    </td>
+      <td><code>mapping 20 /Maps/map-name.yml</code><br><br>Если путь не указан то создаётся пустая карта</td>
     </tr>
     <tr>
       <td><code>mapinit</code></td>
@@ -97,9 +96,9 @@
       <td><code>merge_grids 4005 4430 1 1</code></td>
     </tr>
     <tr>
-      <td><code>tilereplace</code></td>
+      <td><code>variantize</code></td>
       <td>Рандомизирует все варианты плиток пола на гриде</td>
-      <td><code>tilereplace 1984</code></td>
+      <td><code>variantize 1984</code></td>
     </tr>
     <tr>
       <td><code>querymappaused</code></td>
@@ -114,7 +113,7 @@
     <tr>
       <td><code>colornetwork</code></td>
       <td>Перекрашивает всю сеть труб</td>
-      <td><code>colornetwork 40882 Pipe #0000FFFF</code>
+      <td><code>colornetwork 40882 Pipe #0000FFFF</code></td>
     </tr>
     <tr>
       <td><code>tpgrid</code></td>
@@ -140,11 +139,6 @@
       <td><code>toggleautosave</code></td>
       <td>Переключает автосохранение карты</td>
       <td><code>toggleautosave 20</code></td>
-    </tr>
-    <tr>
-      <td><code>tilewalls</code></td>
-      <td>Меняет тайлы под стенками на покрытие</td>
-      <td><code>tilewalls 1984</code></td>
     </tr>
     <tr>
       <td><code>lsmap</code></td>
