@@ -13,3 +13,9 @@ header_links:
     url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/reception-shipyard.html
   - title: Цена шаттлов
     url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/shuttle-costs.html
+  - title: Команды
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/commands.html
+  - title: Ошибки
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/fix-error.html
+  - title: Рендер
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/create-render.html
