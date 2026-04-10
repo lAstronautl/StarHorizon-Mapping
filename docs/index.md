@@ -8,3 +8,6 @@ layout: default
 *   [Cоздание прототипов](./markdown/prototype-creation.html).
 *   [Приёмная верфь](./markdown/reception-shipyard.html).
 *   [Цена шаттлов](./markdown/shuttle-costs.html).
+*   [Команды](./markdown/commands.html).
+*   [Рендер](./markdown/create-render.html).
+*   [Ошибки](./markdown/fix-error.html).
