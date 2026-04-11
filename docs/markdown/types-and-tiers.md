@@ -163,6 +163,42 @@ title: Типы и тиры
 </table>
 </div>
 
+### Тут указаны все размеры шаттлов
+
+<div style="overflow-x:auto;">
+<table style="width:100%; border-collapse: collapse;">
+<thead>
+<tr>
+<th>Размер</th>
+<th>Максимальное количество тайлов</th>
+<th>Максимальный размер</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Микро/Micro</td>
+<td>64 тайлов</td>
+<td>8 тайлов в длину и ширину</td>
+</tr>
+<tr>
+<td>Маленький/Small</td>
+<td>256 тайлов</td>
+<td>16 тайлов в длину и ширину</td>
+</tr>
+<tr>
+<td>Средний/Medium</td>
+<td>1024 тайлов</td>
+<td>32 тайлов в длину и ширину</td>
+</tr>
+<tr>
+<td>Большой/Large</td>
+<td>2304 тайлов</td>
+<td>48 тайлов в длину и ширину</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 ### Пример: Баржа
 
 <div style="overflow-x:auto;">
