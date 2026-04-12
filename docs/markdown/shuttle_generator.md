@@ -9,64 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генератор прототипов шаттлов — StarHorizon</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0e17;
-            color: #c9d1d9;
-            min-height: 100vh;
-        }
-        .header {
-            background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
-            border-bottom: 2px solid #58a6ff;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h1 { color: #58a6ff; font-size: 1.8em; margin-bottom: 5px; }
-        .header p { color: #8b949e; font-size: 0.9em; }
-        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        .section {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            color: #58a6ff;
-            font-size: 1.2em;
-            margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #30363d;
-        }
-        .form-group { margin-bottom: 14px; }
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            color: #8b949e;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px 12px;
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            color: #c9d1d9;
-            font-size: 0.95em;
-            transition: border-color 0.2s;
-        }
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #58a6ff;
-            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
-        }
         .checkbox-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -74,8 +17,6 @@
             max-height: 200px;
             overflow-y: auto;
             padding: 8px;
-            background: #0d1117;
-            border: 1px solid #30363d;
             border-radius: 6px;
         }
         .checkbox-item {
@@ -87,27 +28,21 @@
             border-radius: 4px;
             transition: background 0.15s;
         }
-        .checkbox-item:hover { background: #21262d; }
         .checkbox-item input[type="checkbox"] {
-            accent-color: #58a6ff;
             width: 16px;
             height: 16px;
         }
         .preset-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
         .preset-btn {
             padding: 10px 20px;
-            background: #21262d;
-            border: 1px solid #30363d;
             border-radius: 6px;
-            color: #c9d1d9;
             cursor: pointer;
             transition: all 0.2s;
             flex: 1;
             min-width: 120px;
         }
-        .preset-btn:hover { background: #30363d; border-color: #58a6ff; }
-        .preset-btn.selected { background: #1f6feb; border-color: #58a6ff; color: #fff; }
-        .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .preset-btn.selected { font-weight: bold; }
+        .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
         .btn {
             padding: 12px 28px;
             border: none;
@@ -117,10 +52,8 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-        .btn-primary { background: #238636; color: #fff; flex: 1; }
-        .btn-primary:hover { background: #2ea043; }
-        .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
-        .btn-secondary:hover { background: #30363d; }
+        .btn-primary { color: #fff; flex: 1; }
+        .btn-secondary { border: 1px solid; }
         .output-section { display: none; margin-top: 20px; }
         .output-section.visible { display: block; }
         .output-header {
@@ -131,28 +64,30 @@
         }
         .output-header h2 { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         .output-box {
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 6px;
             padding: 16px;
-            font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
-            font-size: 0.85em;
+            border-radius: 2px;
+            font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+            font-size: 13px;
             white-space: pre-wrap;
             word-wrap: break-word;
             max-height: 500px;
             overflow-y: auto;
             line-height: 1.5;
-            color: #a5d6ff;
         }
         .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .price-calc {
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 6px;
             padding: 12px;
-            margin-top: 10px;
+            border-radius: 2px;
             font-size: 0.9em;
-            color: #7ee787;
+            margin-top: 10px;
+        }
+        .form-group { margin-bottom: 14px; }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 2px;
+            font-size: 0.95em;
         }
         @media (max-width: 600px) {
             .info-row { grid-template-columns: 1fr; }
@@ -161,10 +96,6 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Генератор прототипов шаттлов</h1>
-        <p>StarHorizon — формат на основе реальных прототипов из Resources/Prototypes/</p>
-    </div>
 
     <div class="container">
         <!-- Информация об авторе -->
