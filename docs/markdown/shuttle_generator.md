@@ -3,52 +3,166 @@
 Интерактивный инструмент для создания YAML-прототипов шаттлов в формате StarHorizon.
 
 ---
-
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Минимальные стили только для элементов формы, не охваченных темой */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e17;
+            color: #c9d1d9;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
+            border-bottom: 2px solid #58a6ff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 { color: #58a6ff; font-size: 1.8em; margin-bottom: 5px; }
+        .header p { color: #8b949e; font-size: 0.9em; }
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        .section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #58a6ff;
+            font-size: 1.2em;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #30363d;
+        }
+        .form-group { margin-bottom: 14px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #8b949e;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            font-size: 0.95em;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+        }
         .checkbox-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 8px;
             max-height: 200px;
             overflow-y: auto;
+            padding: 8px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
         }
         .checkbox-item {
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background 0.15s;
         }
-        .preset-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .output-section { display: none; }
+        .checkbox-item:hover { background: #21262d; }
+        .checkbox-item input[type="checkbox"] {
+            accent-color: #58a6ff;
+            width: 16px;
+            height: 16px;
+        }
+        .preset-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .preset-btn {
+            padding: 10px 20px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 1;
+            min-width: 120px;
+        }
+        .preset-btn:hover { background: #30363d; border-color: #58a6ff; }
+        .preset-btn.selected { background: #1f6feb; border-color: #58a6ff; color: #fff; }
+        .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary { background: #238636; color: #fff; flex: 1; }
+        .btn-primary:hover { background: #2ea043; }
+        .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+        .btn-secondary:hover { background: #30363d; }
+        .output-section { display: none; margin-top: 20px; }
         .output-section.visible { display: block; }
         .output-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 12px;
         }
-        @media (max-width: 720px) {
-            .info-row, .checkbox-grid { grid-template-columns: 1fr; }
+        .output-header h2 { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .output-box {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 16px;
+            font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 500px;
+            overflow-y: auto;
+            line-height: 1.5;
+            color: #a5d6ff;
+        }
+        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .price-calc {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #7ee787;
+        }
+        @media (max-width: 600px) {
+            .info-row { grid-template-columns: 1fr; }
+            .checkbox-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div id="title">
-        <h1>Генератор прототипов шаттлов</h1>
-        <p>StarHorizon — формат на основе реальных прототипов из Resources/Prototypes/</p>
-    </div>
 
-    <div class="wrapper">
+    <div class="container">
         <!-- Информация об авторе -->
-        <section>
-            <div id="title">
-                <h2>Информация об авторе</h2>
-            </div>
+        <div class="section">
+            <h2>Информация об авторе</h2>
             <div class="info-row">
                 <div class="form-group">
                     <label>GitHub/Gitea</label>
@@ -59,13 +173,11 @@
                     <input type="text" id="authorDiscord" placeholder="username">
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Информация об сопровождающем -->
-        <section>
-            <div id="title">
-                <h2>Информация об сопровождающем</h2>
-            </div>
+        <div class="section">
+            <h2>Информация об сопровождающем</h2>
             <div class="form-group">
                 <label>Выберите сопровождающего</label>
                 <div class="preset-buttons">
@@ -86,13 +198,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Информация о шаттле -->
-        <section>
-            <div id="title">
-                <h2>Информация о шаттле</h2>
-            </div>
+        <div class="section">
+            <h2>Информация о шаттле</h2>
 
             <div class="info-row">
                 <div class="form-group">
@@ -170,11 +280,11 @@
 
             <div class="form-group" style="margin-top: 16px;">
                 <label class="checkbox-item" style="display: inline-flex; gap: 8px; cursor: pointer;">
-                    <input type="checkbox" id="includeJobs" checked style="width: 16px; height: 16px;">
+                    <input type="checkbox" id="includeJobs" checked style="width: 16px; height: 16px; accent-color: #58a6ff;">
                     Должности
                 </label>
             </div>
-        </section>
+        </div>
 
         <!-- Кнопки действий -->
         <div class="actions">
@@ -183,18 +293,18 @@
         </div>
 
         <!-- Вывод -->
-        <section class="output-section" id="outputSection">
+        <div class="section output-section" id="outputSection">
             <div class="output-header">
                 <h2>Сгенерированный YAML</h2>
                 <div>
                     <button class="btn btn-secondary" onclick="copyOutput()">Копировать</button>
                 </div>
             </div>
-            <pre><code class="output-box" id="outputBox"></code></pre>
+            <div class="output-box" id="outputBox"></div>
             <div style="margin-top: 16px;">
                 <button class="btn btn-secondary" onclick="downloadYaml()">Скачать yml</button>
             </div>
-        </section>
+        </div>
     </div>
 
     <script>
