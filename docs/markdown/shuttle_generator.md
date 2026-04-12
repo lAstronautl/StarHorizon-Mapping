@@ -1,12 +1,9 @@
 # Генератор прототипов шаттлов
 
-Интерактивный инструмент для создания YAML-прототипов шаттлов в формате StarHorizon.
+### Интерактивный инструмент для создания YAML-прототипов шаттлов в формате StarHorizon.
 
 ---
-<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -16,23 +13,14 @@
             min-height: 100vh;
         }
         .header {
-            background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
-            border-bottom: 2px solid #58a6ff;
+            background: linear-gradient(135deg, #1a1f2e 0%, #191919 100%);
             padding: 20px;
             text-align: center;
         }
         .header h1 { color: #58a6ff; font-size: 1.8em; margin-bottom: 5px; }
-        .header p { color: #8b949e; font-size: 0.9em; }
+        .header p { font-size: 0.9em; }
         .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        .section {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 20px;
-        }
         .section h2 {
-            color: #58a6ff;
             font-size: 1.2em;
             margin-bottom: 16px;
             padding-bottom: 8px;
@@ -42,7 +30,6 @@
         .form-group label {
             display: block;
             margin-bottom: 6px;
-            color: #8b949e;
             font-size: 0.9em;
             font-weight: 500;
         }
@@ -51,7 +38,7 @@
         .form-group textarea {
             width: 100%;
             padding: 10px 12px;
-            background: #0d1117;
+            background: #191919;
             border: 1px solid #30363d;
             border-radius: 6px;
             color: #c9d1d9;
@@ -71,7 +58,7 @@
             max-height: 200px;
             overflow-y: auto;
             padding: 8px;
-            background: #0d1117;
+            background: #191919;
             border: 1px solid #30363d;
             border-radius: 6px;
         }
@@ -84,7 +71,7 @@
             border-radius: 4px;
             transition: background 0.15s;
         }
-        .checkbox-item:hover { background: #21262d; }
+        .checkbox-item:hover { background: #191919; }
         .checkbox-item input[type="checkbox"] {
             accent-color: #58a6ff;
             width: 16px;
@@ -93,7 +80,7 @@
         .preset-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
         .preset-btn {
             padding: 10px 20px;
-            background: #21262d;
+            background: #191919;
             border: 1px solid #30363d;
             border-radius: 6px;
             color: #c9d1d9;
@@ -128,7 +115,7 @@
         }
         .output-header h2 { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         .output-box {
-            background: #0d1117;
+            background: #191919;
             border: 1px solid #30363d;
             border-radius: 6px;
             padding: 16px;
@@ -143,7 +130,7 @@
         }
         .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
         .price-calc {
-            background: #0d1117;
+            background: #191919;
             border: 1px solid #30363d;
             border-radius: 6px;
             padding: 12px;
