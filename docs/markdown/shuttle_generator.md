@@ -3,97 +3,10 @@
 Интерактивный инструмент для создания YAML-прототипов шаттлов в формате StarHorizon.
 
 ---
-
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .checkbox-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 8px;
-            max-height: 200px;
-            overflow-y: auto;
-            padding: 8px;
-            border-radius: 6px;
-        }
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            padding: 6px 8px;
-            border-radius: 4px;
-            transition: background 0.15s;
-        }
-        .checkbox-item input[type="checkbox"] {
-            width: 16px;
-            height: 16px;
-        }
-        .preset-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
-        .preset-btn {
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s;
-            flex: 1;
-            min-width: 120px;
-        }
-        .preset-btn.selected { font-weight: bold; }
-        .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
-        .btn {
-            padding: 12px 28px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .btn-primary { color: #fff; flex: 1; }
-        .btn-secondary { border: 1px solid; }
-        .output-section { display: none; margin-top: 20px; }
-        .output-section.visible { display: block; }
-        .output-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        .output-header h2 { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .output-box {
-            padding: 16px;
-            border-radius: 2px;
-            font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
-            font-size: 13px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-height: 500px;
-            overflow-y: auto;
-            line-height: 1.5;
-        }
-        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-        .price-calc {
-            padding: 12px;
-            border-radius: 2px;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-        .form-group { margin-bottom: 14px; }
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: 2px;
-            font-size: 0.95em;
-        }
-        @media (max-width: 600px) {
-            .info-row { grid-template-columns: 1fr; }
-            .checkbox-grid { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
 
