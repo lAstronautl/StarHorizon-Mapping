@@ -3,17 +3,52 @@
 Интерактивный инструмент для создания YAML-прототипов шаттлов в формате StarHorizon.
 
 ---
+
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Минимальные стили только для элементов формы, не охваченных темой */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 8px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        .preset-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .output-section { display: none; }
+        .output-section.visible { display: block; }
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 720px) {
+            .info-row, .checkbox-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+    <div id="title">
+        <h1>Генератор прототипов шаттлов</h1>
+        <p>StarHorizon — формат на основе реальных прототипов из Resources/Prototypes/</p>
+    </div>
 
-    <div class="container">
+    <div class="wrapper">
         <!-- Информация об авторе -->
-        <div class="section">
-            <h2>Информация об авторе</h2>
+        <section>
+            <div id="title">
+                <h2>Информация об авторе</h2>
+            </div>
             <div class="info-row">
                 <div class="form-group">
                     <label>GitHub/Gitea</label>
@@ -24,11 +59,13 @@
                     <input type="text" id="authorDiscord" placeholder="username">
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Информация об сопровождающем -->
-        <div class="section">
-            <h2>Информация об сопровождающем</h2>
+        <section>
+            <div id="title">
+                <h2>Информация об сопровождающем</h2>
+            </div>
             <div class="form-group">
                 <label>Выберите сопровождающего</label>
                 <div class="preset-buttons">
@@ -49,11 +86,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Информация о шаттле -->
-        <div class="section">
-            <h2>Информация о шаттле</h2>
+        <section>
+            <div id="title">
+                <h2>Информация о шаттле</h2>
+            </div>
 
             <div class="info-row">
                 <div class="form-group">
@@ -131,11 +170,11 @@
 
             <div class="form-group" style="margin-top: 16px;">
                 <label class="checkbox-item" style="display: inline-flex; gap: 8px; cursor: pointer;">
-                    <input type="checkbox" id="includeJobs" checked style="width: 16px; height: 16px; accent-color: #58a6ff;">
+                    <input type="checkbox" id="includeJobs" checked style="width: 16px; height: 16px;">
                     Должности
                 </label>
             </div>
-        </div>
+        </section>
 
         <!-- Кнопки действий -->
         <div class="actions">
@@ -144,18 +183,18 @@
         </div>
 
         <!-- Вывод -->
-        <div class="section output-section" id="outputSection">
+        <section class="output-section" id="outputSection">
             <div class="output-header">
                 <h2>Сгенерированный YAML</h2>
                 <div>
                     <button class="btn btn-secondary" onclick="copyOutput()">Копировать</button>
                 </div>
             </div>
-            <div class="output-box" id="outputBox"></div>
+            <pre><code class="output-box" id="outputBox"></code></pre>
             <div style="margin-top: 16px;">
                 <button class="btn btn-secondary" onclick="downloadYaml()">Скачать yml</button>
             </div>
-        </div>
+        </section>
     </div>
 
     <script>
