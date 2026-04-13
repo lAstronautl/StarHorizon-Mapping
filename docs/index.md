@@ -11,3 +11,4 @@ layout: default
 *   [Команды](./markdown/commands.html).
 *   [Рендер](./markdown/create-render.html).
 *   [Ошибки](./markdown/fix-error.html).
+*   [Создатель прототипа (beta)](./markdown/shuttle-generator.html).

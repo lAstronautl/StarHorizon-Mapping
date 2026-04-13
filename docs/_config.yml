@@ -19,3 +19,5 @@ header_links:
     url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/fix-error.html
   - title: Рендер
     url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/create-render.html
+  - title: Создатель прототипа (beta)
+    url: https://lastronautl.github.io/StarHorizon-Mapping/markdown/shuttle-generator.html
