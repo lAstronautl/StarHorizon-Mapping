@@ -197,13 +197,25 @@
         </div>
 
         <div class="form-group">
-            <label>Полное имя (name)</label>
+            <label>Полное имя с корпорацией</label>
             <input type="text" id="fullName" placeholder="NT Stellaris">
         </div>
 
         <div class="form-group">
             <label>Описание</label>
             <input type="text" id="description" placeholder="Краткое описание шаттла">
+        </div>
+
+        <div class="form-group">
+            <label>Парент</label>
+            <select id="parentVessel">
+                <option value="BaseVessel">BaseVessel (по умолчанию)</option>
+                <option value="BaseVesselAntag">BaseVesselAntag</option>
+                <option value="StandardFrontierVessel">StandardFrontierVessel</option>
+                <option value="StandardFrontierSecurityVessel">StandardFrontierSecurityVessel</option>
+                <option value="StandardFrontierSecurityExpeditionVessel">StandardFrontierSecurityExpeditionVessel</option>
+                <option value="StandardFrontierAntagVessel">StandardFrontierAntagVessel</option>
+            </select>
         </div>
 
         <div class="info-row">
@@ -218,7 +230,7 @@
         </div>
         <div class="price-calc" id="priceCalc">Введите базовую цену и наценку для расчёта</div>
         <div class="form-group" style="margin-top: 10px;">
-            <label>Итоговая цена</label>
+            <label>Округлить до:</label>
             <input type="number" id="priceFinal" placeholder="Оставьте пустым или введите своё значение" min="0" oninput="updateFinalPrice()">
         </div>
 
@@ -334,7 +346,7 @@
 
     const MAINTAINER_PRESETS = {
         'Astrolaris': { github: 'https://git.starhorizon.ru/Astrolaris', discord: 'astr0laris' },
-        'Spidern': { github: 'https://git.starhorizon.ru/Spidern', discord: 'spidern' },
+        'Spidern': { github: 'https://git.starhorizon.ru/SpidernAteing', discord: 'helloohelloo' },
     };
 
     const SHUTTLE_PATHS = {
@@ -474,13 +486,10 @@
         const includeJobs = document.getElementById('includeJobs').checked;
         const availableJobs = includeJobs ? getAvailableJobs(group, classes) : '{}';
 
-        // Parent: BaseVesselAntag для Syndicate/Pirate, иначе BaseVessel
-        const parentVessel = (classes.includes('Syndicate') || classes.includes('Pirate')) ? 'BaseVesselAntag' : 'BaseVessel';
+        const parentVessel = document.getElementById('parentVessel').value;
 
-        // Собираем YAML вручную в точном формате реальных прототипов
         let yaml = '';
 
-        // Header
         yaml += '# Информация об авторе шаттла\n';
         yaml += `# GitHub/Gitea: ${authorGithub}\n`;
         yaml += `# Discord: ${authorDiscord}\n`;
@@ -536,7 +545,7 @@
             yaml += '          availableJobs: {}\n';
         } else {
             yaml += '          availableJobs:\n';
-            yaml += `            ${availableJobs}\n`;
+            yaml += `${availableJobs}\n`;
         }
 
         document.getElementById('outputBox').textContent = yaml;
@@ -568,6 +577,7 @@
         document.querySelectorAll('input[type="checkbox"]').forEach(el => el.checked = false);
         document.getElementById('category').selectedIndex = 2;
         document.getElementById('group').selectedIndex = 0;
+        document.getElementById('parentVessel').selectedIndex = 0;
         selectedMaintainer = null;
         document.querySelectorAll('.preset-btn').forEach(btn => btn.classList.remove('selected'));
         document.getElementById('customMaintainer').style.display = 'none';
