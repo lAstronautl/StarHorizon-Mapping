@@ -543,6 +543,8 @@
         yaml += '        - type: StationJobs\n';
         if (!includeJobs) {
             yaml += '          availableJobs: {}\n';
+        } else if (availableJobs === '{}') {
+            yaml += '          availableJobs: {}\n';
         } else {
             yaml += '          availableJobs:\n';
             yaml += `${availableJobs}\n`;
