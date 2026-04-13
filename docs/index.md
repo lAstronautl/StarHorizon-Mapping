@@ -12,3 +12,4 @@ layout: default
 *   [Рендер](./markdown/create-render.html).
 *   [Ошибки](./markdown/fix-error.html).
 *   [Создатель прототипа (beta)](./markdown/shuttle-generator.html).
+*   [Иконки шаттлов](https://lastronautl.github.io/starhorizon-map-render/).
