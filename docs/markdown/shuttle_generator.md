@@ -407,7 +407,7 @@
         markupVal = markup;
         priceRaw = raw;
         finalPrice = result;
-        document.getElementById('priceCalc').textContent = `${base} + ${markup}% = ${raw} (автоматически: ${result})`;
+        document.getElementById('priceCalc').textContent = `${base} + ${markup}% = ${result}`;
         document.getElementById('priceFinal').value = '';
     }
 
