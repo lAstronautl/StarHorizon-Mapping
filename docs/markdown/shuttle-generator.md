@@ -1,6 +1,6 @@
 # Генератор прототипов шаттлов
 
-### Тестовы опросник после которого генерируется YML файл прототипа
+### Тестовый опросник, после которого генерируется YML файл прототипа
 
 ---
 
@@ -207,11 +207,18 @@
         </div>
 
         <div class="form-group">
-            <label>Парент</label>
-            <select id="parentVessel">
-                <option value="BaseVessel">BaseVessel (по умолчанию)</option>
-                <option value="BaseVesselAntag">BaseVesselAntag</option>
+            <label class="checkbox-item" style="display: inline-flex; gap: 8px; cursor: pointer;">
+                <input type="checkbox" id="isAntag" style="width: 16px; height: 16px; accent-color: #58a6ff;">
+                Антагонистический шаттл (BaseVesselAntag)
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Прототип станции (stationProto)</label>
+            <select id="stationProto">
+                <option value="auto">Автоматически (по классам)</option>
                 <option value="StandardFrontierVessel">StandardFrontierVessel</option>
+                <option value="StandardFrontierExpeditionVessel">StandardFrontierExpeditionVessel</option>
                 <option value="StandardFrontierSecurityVessel">StandardFrontierSecurityVessel</option>
                 <option value="StandardFrontierSecurityExpeditionVessel">StandardFrontierSecurityExpeditionVessel</option>
                 <option value="StandardFrontierAntagVessel">StandardFrontierAntagVessel</option>
@@ -482,11 +489,12 @@
         }
 
         const shuttlePath = `${SHUTTLE_PATHS[group]}${shuttleId.toLowerCase()}.yml`;
-        const stationProto = getStationProto(classes);
+        const stationProtoSelect = document.getElementById('stationProto').value;
+        const stationProto = stationProtoSelect === 'auto' ? getStationProto(classes) : stationProtoSelect;
         const includeJobs = document.getElementById('includeJobs').checked;
         const availableJobs = includeJobs ? getAvailableJobs(group, classes) : '{}';
 
-        const parentVessel = document.getElementById('parentVessel').value;
+        const parentVessel = document.getElementById('isAntag').checked ? 'BaseVesselAntag' : 'BaseVessel';
 
         let yaml = '';
 
@@ -494,7 +502,7 @@
         yaml += `# GitHub/Gitea: ${authorGithub}\n`;
         yaml += `# Discord: ${authorDiscord}\n`;
         yaml += '\n';
-        yaml += '# Информация об сопровождающем\n';
+        yaml += '# Информация о сопровождающем\n';
         yaml += `# GitHub/Gitea: ${maintainerGithub}\n`;
         yaml += `# Discord: ${maintainerDiscord}\n`;
         yaml += '\n';
@@ -579,7 +587,8 @@
         document.querySelectorAll('input[type="checkbox"]').forEach(el => el.checked = false);
         document.getElementById('category').selectedIndex = 2;
         document.getElementById('group').selectedIndex = 0;
-        document.getElementById('parentVessel').selectedIndex = 0;
+        document.getElementById('isAntag').checked = false;
+        document.getElementById('stationProto').selectedIndex = 0;
         selectedMaintainer = null;
         document.querySelectorAll('.preset-btn').forEach(btn => btn.classList.remove('selected'));
         document.getElementById('customMaintainer').style.display = 'none';
