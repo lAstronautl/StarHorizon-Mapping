@@ -160,9 +160,9 @@
         </div>
     </div>
 
-    <!-- Информация об сопровождающем -->
+    <!-- Информация о сопровождающем -->
     <div class="section">
-        <h2>Информация об сопровождающем</h2>
+        <h2>Информация о сопровождающем</h2>
         <div class="form-group">
             <label>Выберите сопровождающего</label>
             <div class="preset-buttons">
@@ -262,7 +262,7 @@
 
         <div class="form-group">
             <label>Доступ</label>
-            <input type="text" id="access" placeholder="Оставьте пустым если не нужен">
+            <input type="text" id="access" placeholder="Оставьте пустым, если не нужен">
         </div>
 
         <div class="form-group">

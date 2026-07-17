@@ -67,7 +67,7 @@
     </tr>
     <tr>
       <td><code>addmap</code></td>
-      <td>Добавляет пустую инцилизированую карту</td>
+      <td>Добавляет пустую инициализированную карту</td>
       <td><code>addmap 20</code></td>
     </tr>
     <tr>
@@ -82,12 +82,12 @@
     </tr>
     <tr>
       <td><code>mapping</code></td>
-      <td>Загружает змороженую карту</td>
+      <td>Загружает замороженную карту</td>
       <td><code>mapping 20 /Maps/map-name.yml</code><br><br>Если путь не указан то создаётся пустая карта</td>
     </tr>
     <tr>
       <td><code>mapinit</code></td>
-      <td>Инцилизирует замороженую карту</td>
+      <td>Инициализирует замороженную карту</td>
       <td><code>mapinit 20</code></td>
     </tr>
     <tr>
@@ -152,7 +152,7 @@
     </tr>
     <tr>
       <td><code>warp</code></td>
-      <td>Позволяет телепортироватся к варп поинтам</td>
+      <td>Позволяет телепортироваться к варп-поинтам</td>
       <td><code>warp NFDev</code></td>
     </tr>
   </tbody>
